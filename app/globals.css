@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-oxblood: #531B24;
+  --color-wine: #6A2931;
+  --color-taupe: #C6B7A2;
+  --color-cream: #E7D8C3;
+  --color-ivory: #F3ECE2;
+  --color-darkbg: #2B1218;
+}
+
+body {
+  background-color: #F3ECE2;
+  color: #531B24;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Luxury Editorial Headings */
+h1, h2, h3, .font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.015em;
+}
+
+/* Custom Scrollbar styled with Warm Taupe */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F3ECE2;
+}
+::-webkit-scrollbar-thumb {
+  background: #C6B7A2;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6A2931;
+}
+
+/* Mobile PWA Bottom Safe Area */
+.pb-safe {
+  padding-bottom: calc(5rem + env(safe-area-inset-bottom, 16px));
+}
+
+/* Delicate subtle card shadows */
+.card-elevation {
+  background-color: #E7D8C3;
+  border: 1px solid rgba(198, 183, 162, 0.4);
+  box-shadow: 0 4px 20px -2px rgba(83, 27, 36, 0.05);
+}
+
+.card-elevation-subtle {
+  background-color: #FAF5EE;
+  border: 1px solid rgba(198, 183, 162, 0.5);
+}
+
