@@ -102,3 +102,4 @@ python main.py
 ### Database (Supabase PostgreSQL):
 - Schema file located at `supabase/schema.sql`.
 - Includes full entity definitions, check constraints, temporal indexes, and PostgreSQL Row Level Security (RLS) policies.
+
