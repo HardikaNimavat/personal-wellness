@@ -31,11 +31,12 @@ const STORAGE_KEYS = {
 const INITIAL_PROFILE: UserProfile = {
   id: 'usr-001',
   user_id: 'usr-001',
-  full_name: 'Elena Rostova',
-  preferred_name: 'Elena',
-  email: 'elena@wellness.internal',
+  full_name: '',
+  preferred_name: '',
+  email: '',
   client_encryption_enabled: true,
-  created_at: new Date(Date.now() - 30 * 86400000).toISOString(),
+  has_completed_onboarding: false,
+  created_at: new Date().toISOString(),
 };
 
 const INITIAL_FITNESS: FitnessProfile = {
@@ -326,6 +327,13 @@ export class StorageService {
   // User Profile & Fitness
   static getProfile(): UserProfile {
     return this.getItem(STORAGE_KEYS.PROFILE, INITIAL_PROFILE);
+  }
+
+  static updateProfile(profile: Partial<UserProfile>): UserProfile {
+    const current = this.getProfile();
+    const updated = { ...current, ...profile };
+    this.setItem(STORAGE_KEYS.PROFILE, updated);
+    return updated;
   }
 
   static getFitness(): FitnessProfile {

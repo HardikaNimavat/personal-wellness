@@ -69,6 +69,8 @@ export interface UserProfile {
   preferred_name: string;
   email: string;
   client_encryption_enabled: boolean;
+  has_completed_onboarding: boolean;
+  gemini_api_key?: string;
   created_at: string;
 }
 
